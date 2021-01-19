@@ -1,0 +1,120 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ED213A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93291E, #ED213A); 
+background: linear-gradient(to right, #93291E, #ED213A); 
+}
+.calculator {
+  background: whitesmoke;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator-display {
+  background: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
+} 
+/* Display */
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: 'Lucida Console', sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(199, 199, 199);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: #0092e1;
+  color: white;
+  font-size: 30px;
+}
+
+.clear {
+  background: #ED213A; 
+  color: white;
+}
+
+.clear:hover {
+ filter: brightness(60%);
+}
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: rgb(13, 206, 87);
+  color: white;
+}
+
+.decimal {
+  background: rgb(254, 218, 14);
+  color: black;
+  font-size: 30px;
+}
+
+/* Media Query: Large smart phones (vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
