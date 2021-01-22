@@ -13,6 +13,14 @@ body {
 background: -webkit-linear-gradient(to right, #93291E, #ED213A); 
 background: linear-gradient(to right, #93291E, #ED213A); 
 }
+.brand-img {
+  position: absolute;
+  margin: 0;
+  width: 193px;
+  height: 47.64px;
+  left: 221px;
+  top: 50.25px;
+}
 .calculator {
   background: whitesmoke;
   width: 400px;
@@ -116,5 +124,13 @@ button:focus {
 @media screen and (max-width: 600px) {
   .calculator {
     width: 95%;
+  }
+  .brand-img {
+    width: 131px;
+    height: 32px;
+    position: absolute;
+    margin: 0;
+    left: 10px;
+  top: 50.25px;
   }
 }
